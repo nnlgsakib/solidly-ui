@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "build2": "next build && next export",
-    "start": "next start"
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "export": "export SET NODE_OPTIONS=--openssl-legacy-provider && next export",
+    "build2": "export SET NODE_OPTIONS=--openssl-legacy-provider && next build && next export",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && next start"
   },
   "dependencies": {
     "@dopex-io/web3-multicall": "^0.1.5",
